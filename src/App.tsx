@@ -1,6 +1,8 @@
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
+import { router } from "./routes/AppRoutes";
 
 function App() {
   const theme = createTheme({
@@ -27,7 +29,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {/* <RouterProvider router={router} /> */}
+        <RouterProvider router={router} />
       </ThemeProvider>
     </QueryClientProvider>
   );
